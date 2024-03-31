@@ -44,7 +44,7 @@ export default class Character {
       image.src = goblinImage;
       image.addEventListener(
         "click",
-        this.handleImageClick.bind(this, handleClick, image),
+        this.handleImageClick.bind(this, handleClick, image)
       );
 
       cells[i].appendChild(image);
