@@ -41,11 +41,9 @@ export default class Character {
       }
 
       const image = document.createElement("img");
+      const h = this.handleImageClick.bind(this, handleClick, image);
       image.src = goblinImage;
-      image.addEventListener(
-        "click",
-        this.handleImageClick.bind(this, handleClick, image)
-      );
+      image.addEventListener("click", h);
 
       cells[i].appendChild(image);
     }, 1000);
